@@ -274,7 +274,8 @@ class DrQA(object):
         # top scored answers for each question in the batch.
         queues = [[] for _ in range(len(queries))]
         for result, ex_ids, batch_size in result_handles:
-            s, e, score = result.get()
+            # todo FIX multi-processing issue 1 (uncomment get)
+            s, e, score = result#.get(timeout=10)
             for i in range(batch_size):
                 # We take the top prediction per split.
                 if len(score[i]) > 0:
@@ -284,6 +285,7 @@ class DrQA(object):
                         heapq.heappush(queue, item)
                     else:
                         heapq.heappushpop(queue, item)
+
 
         # Arrange final top prediction data.
         all_predictions = []

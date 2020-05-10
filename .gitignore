@@ -1,7 +1,22 @@
-*.pyc
+# Files and directories for git to ignore
+
+# misc
 *.DS_Store
 *~
+
+# build files
+*.egg-info
+*.pyc
+
+# data files
 data/
 *.tar.gz
-*.egg-info
 scripts/reader/official_eval.py
+cvd19-documents/
+drQA-training-datasets/
+
+# jupyter
+*.ipynb_checkpoints*
+
+# pycharm
+.idea/

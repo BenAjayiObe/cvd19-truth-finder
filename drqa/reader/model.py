@@ -300,7 +300,8 @@ class DocReader(object):
                 return self.decode_candidates(*args)
         else:
             args = (score_s, score_e, top_n, self.args.max_len)
-            if async_pool:
+            # todo FIX multi-processing issue 1 (change this back to 'if async_pool:')
+            if False:
                 return async_pool.apply_async(self.decode, args)
             else:
                 return self.decode(*args)
