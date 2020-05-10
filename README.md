@@ -1,6 +1,14 @@
 # Note
 This repo is built from the Facebook drQA repo which can be found [here](https://github.com/facebookresearch/DrQA).
 
+## Instructions
+
+To run full pipeline run the following:
+```
+python notebooks/run_pipeline.py
+```
+
+
 # DrQA
 This is a PyTorch implementation of the DrQA system described in the ACL 2017 paper [Reading Wikipedia to Answer Open-Domain Questions](https://arxiv.org/abs/1704.00051).
 
