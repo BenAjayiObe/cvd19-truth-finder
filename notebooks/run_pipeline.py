@@ -38,9 +38,17 @@ def process(question, candidates=None, top_n=1, n_docs=5):
 
 if __name__ == '__main__':
     # Arguments
-    args_reader_model="/home/ubuntu/cvd19-truth-finder/data/covid19/model/20200509-c9d21e14.mdl"
-    args_retriever_model="/home/ubuntu/cvd19-truth-finder/data/covid19/doc_ranker/doc-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz"
-    args_doc_db="/home/ubuntu/cvd19-truth-finder/data/covid19/doc-db/doc.db"
+    # args_reader_model="/home/ubuntu/cvd19-truth-finder/data/covid19/model/20200509-c9d21e14.mdl"
+    # args_retriever_model="/home/ubuntu/cvd19-truth-finder/data/covid19/doc_ranker/doc-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz"
+    # args_doc_db="/home/ubuntu/cvd19-truth-finder/data/covid19/doc-db/doc.db"
+    # args_tokenizer="spacy"
+    # args_candidate_file=None
+    # args_no_cuda=True
+    # args_gpu=-1
+
+    args_reader_model="../data/covid19/model/20200509-c9d21e14.mdl"
+    args_retriever_model="../data/covid19/doc_ranker/doc-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz"
+    args_doc_db=".. /data/covid19/doc-db/doc.db"
     args_tokenizer="spacy"
     args_candidate_file=None
     args_no_cuda=True
