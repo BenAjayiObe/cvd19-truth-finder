@@ -47,8 +47,8 @@ if __name__ == '__main__':
     # args_gpu=-1
 
     args_reader_model="../data/covid19/model/20200509-c9d21e14.mdl"
-    args_retriever_model="../data/covid19/doc_ranker/doc-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz"
-    args_doc_db=".. /data/covid19/doc-db/doc.db"
+    args_retriever_model="../data/covid19/full_doc_ranker/full_doc-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz"
+    args_doc_db="../data/covid19/doc-db/full_doc.db"
     args_tokenizer="spacy"
     args_candidate_file=None
     args_no_cuda=True
@@ -76,4 +76,4 @@ if __name__ == '__main__':
         tokenizer=args_tokenizer
     )
 
-    process("How many people are infected?", top_n=2)
+    process("How many people are infected?", top_n=10)
