@@ -126,7 +126,7 @@ class DrQA(object):
         else:
             tok_class = tokenizers.get_class(tokenizer)
         annotators = tokenizers.get_annotators_for_model(self.reader)
-        tok_opts = {'annotators': annotators}
+        tok_opts = {'annotators': annotators, 'model': 'en_core_web_sm'}
 
         # ElasticSearch is also used as backend if used as ranker
         if hasattr(self.ranker, 'es'):
@@ -274,7 +274,7 @@ class DrQA(object):
         # top scored answers for each question in the batch.
         queues = [[] for _ in range(len(queries))]
         for result, ex_ids, batch_size in result_handles:
-            s, e, score = result.get(timeout=10)
+            s, e, score = result.get(timeout=100)
             for i in range(batch_size):
                 # We take the top prediction per split.
                 if len(score[i]) > 0:

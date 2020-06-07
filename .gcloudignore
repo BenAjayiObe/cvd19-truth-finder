@@ -1,0 +1,11 @@
+/notebooks
+/drQA-training-datasets
+/dist
+/cvd19-documents
+/build
+/.ipynb_checkpoints
+/services
+/drqa.egg-info
+data/covid19/doc-db/full_doc.db
+data/covid19/full_doc_ranker
+data/covid19/pre-database-documents
