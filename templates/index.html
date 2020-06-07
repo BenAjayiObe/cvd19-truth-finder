@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>DrQA</title>
+
+  <!-- Libraries and styling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">CVD-TF</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-left w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT ME</a>
+        <a href="#team" class="w3-bar-item w3-button"> HOW THIS WORKS</a>
+        <a href="#work" class="w3-bar-item w3-button"> SUPPORT THIS PROJECT</a>
+      </div>
+      <div class="w3-right w3-hide-small">
+        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i> </a>
+        <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i> </a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i> </a>
+        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i> </a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- The form -->
+  <div class="query-form-container">
+    <form class="query-form" action="{{ url_for('query') }}", method="post">
+      <input type="text" placeholder="Search.." name="query">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+ <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+
+</body>
+
+</html>
