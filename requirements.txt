@@ -9,7 +9,7 @@ nltk==3.5
 elasticsearch==7.6.0
 pexpect==4.2.1
 gunicorn==20.0.4
-Flask==1.1.2
+Flask==2.3.2
 spacy==2.2.4
 torch==1.5.0
 thinc==7.4.0
